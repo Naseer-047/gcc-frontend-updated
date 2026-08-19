@@ -20,6 +20,8 @@ body {
 
 .app-container {
   min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
   background-image: url('../assets/bg-shapes-mobile.png');
   background-size: cover;
   background-position: top center;
