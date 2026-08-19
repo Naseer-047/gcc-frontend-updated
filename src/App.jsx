@@ -76,6 +76,13 @@ function App() {
             </button>
           </div>
 
+          {/* Scroll Down (Mobile Only) */}
+          <div className="scroll-down mobile-only">
+            <Mouse size={24} />
+            <span>Scroll Down</span>
+            <ChevronDown size={20} className="bounce-arrow" />
+          </div>
+
           {/* Stats Section */}
           <div className="stats-section">
             <div className="stat-item">
@@ -111,13 +118,6 @@ function App() {
         </div>
 
       </main>
-
-      {/* Scroll Down (Mobile Only) */}
-      <div className="scroll-down mobile-only">
-        <Mouse size={24} />
-        <span>Scroll Down</span>
-        <ChevronDown size={20} />
-      </div>
 
     </div>
   );
