@@ -50,6 +50,7 @@ function App() {
         
         <div className="hero-content">
           <div className="pill-badge">
+            <div className="dot"></div>
             <span>Student Driven Tech Community</span>
           </div>
 

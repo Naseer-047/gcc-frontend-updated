@@ -19,9 +19,9 @@ body {
 }
 
 .app-container {
-  min-height: 100vh;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
   background-image: url('../assets/bg-shapes-mobile.png');
   background-size: cover;
   background-position: top center;
@@ -102,7 +102,7 @@ body {
 }
 
 .nav-join-btn {
-  display: none;
+  display: none !important;
 }
 
 .menu-btn {
@@ -148,16 +148,24 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  background-color: #f1fae6;
   padding: 8px 16px;
   border-radius: 30px;
   margin-bottom: 24px;
 }
 
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: var(--primary-green);
+  border-radius: 50%;
+}
 
-
-
-
-.hero-title {
+.pill-badge span {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+}.hero-title {
   font-size: 52px;
   font-weight: 900;
   line-height: 1.05;
@@ -227,12 +235,7 @@ body {
 }
 
 .hero-image-container {
-  width: 100%;
-  max-width: 600px;
-  margin-bottom: 20px;
-  position: relative;
-  display: flex;
-  justify-content: center;
+  display: none;
 }
 
 .mobile-img {
@@ -308,6 +311,10 @@ body {
 
 @media (min-width: 1024px) {
   .app-container {
+    height: auto;
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: visible;
     background-image: url('../assets/bg-shapes-desktop.png');
   }
 
@@ -350,7 +357,7 @@ body {
   }
 
   .nav-join-btn {
-    display: flex;
+    display: flex !important;
     padding: 14px 24px;
     font-size: 14px;
     border-radius: 12px;
