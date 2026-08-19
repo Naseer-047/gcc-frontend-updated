@@ -82,33 +82,6 @@ function App() {
             <span>Scroll Down</span>
             <ChevronDown size={20} className="bounce-arrow" />
           </div>
-
-          {/* Stats Section */}
-          <div className="stats-section">
-            <div className="stat-item">
-              <Users className="stat-icon" size={24} />
-              <h3>500+</h3>
-              <p>Members</p>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <Calendar className="stat-icon" size={24} />
-              <h3>25+</h3>
-              <p>Events</p>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <Code2 className="stat-icon" size={24} />
-              <h3>12+</h3>
-              <p>Projects</p>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <Trophy className="stat-icon" size={24} />
-              <h3>10+</h3>
-              <p>Workshops</p>
-            </div>
-          </div>
         </div>
 
         {/* Laptop Image */}

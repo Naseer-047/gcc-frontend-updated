@@ -298,6 +298,8 @@ body {
   font-weight: 600;
   font-size: 13px;
   cursor: pointer;
+  position: relative;
+  z-index: 20;
   margin-bottom: 20px;
 }
 
