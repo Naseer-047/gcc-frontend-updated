@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, Users, Calendar, Mouse, ChevronDown, Trophy, Code2, ChevronRight, Rocket, Play, ArrowUpRight, Volume2, Maximize, ArrowRight, Mic, Code, Github, Box, Monitor, X, Star, MapPin, Clock } from 'lucide-react';
+import { Menu, Users, Calendar, Mouse, ChevronDown, Trophy, Code2, ChevronRight, Rocket, Play, ArrowUpRight, Volume2, Maximize, ArrowRight, Mic, Code, Github, Box, Monitor, X, Star, MapPin, Clock, Brain, Smartphone, Shield, Cloud } from 'lucide-react';
 import './index.css';
 
 import mobileImg from '../assets/bg-less-desktop-mobile.png';
@@ -237,6 +237,163 @@ function App() {
 
         </div>
 
+      </section>
+
+      {/* Domains Section (Mobile Only) */}
+      <section className="domains-section mobile-only">
+        <div className="domains-header">
+          <div className="domains-label">
+            <div className="dot" style={{ display: 'inline-block', marginRight: '8px', verticalAlign: 'middle' }}></div>
+            <span style={{ verticalAlign: 'middle', fontWeight: 'bold', fontSize: '11px', letterSpacing: '1px', color: '#666' }}>OUR DOMAINS</span>
+          </div>
+
+          <h2 className="domains-title">
+            Explore Your<br />
+            <span className="green-text underline-straight">Domain.</span> <span className="domain-icon-box"><Code size={20} className="green-text" /></span>
+          </h2>
+
+          <p className="domains-subtitle">
+            Find what excites you. <span className="green-text">Learn</span> it,<br />
+            <span className="green-text">build</span> with it, and <span className="green-text">grow</span><br />
+            with the community.
+          </p>
+        </div>
+
+        {/* Filter Chips */}
+        <div className="domains-filters">
+          <button className="domain-chip active">All</button>
+          <button className="domain-chip"><Code size={14} style={{ marginRight: '4px' }} /> Development</button>
+          <button className="domain-chip"><Brain size={14} style={{ marginRight: '4px' }} /> AI</button>
+          <button className="domain-chip"><Shield size={14} style={{ marginRight: '4px' }} /> Security</button>
+          <button className="domain-chip"><Trophy size={14} style={{ marginRight: '4px' }} /> CP</button>
+        </div>
+
+        {/* Domains Grid */}
+        <div className="domains-grid">
+          {/* Card 1 */}
+          <div className="domain-card">
+            <div className="domain-card-header">
+              <div className="domain-icon-bg" style={{ backgroundColor: '#f7fee7' }}>
+                <Code size={28} color="#65a30d" />
+              </div>
+              <div className="domain-number-container">
+                <span className="domain-number">01</span>
+                <div className="domain-number-underline"></div>
+              </div>
+            </div>
+            <h3 className="domain-card-title">Web<br/>Development</h3>
+            <p className="domain-card-desc">Build modern websites and full-stack applications.</p>
+            <div className="domain-arrow-btn">
+              <ArrowRight size={18} color="#65a30d" />
+            </div>
+          </div>
+
+          {/* Card 2 */}
+          <div className="domain-card">
+            <div className="domain-card-header">
+              <div className="domain-icon-bg" style={{ backgroundColor: '#eff6ff' }}>
+                <Brain size={28} color="#3b82f6" />
+              </div>
+              <div className="domain-number-container">
+                <span className="domain-number">02</span>
+                <div className="domain-number-underline"></div>
+              </div>
+            </div>
+            <h3 className="domain-card-title">AI & Machine<br/>Learning</h3>
+            <p className="domain-card-desc">Explore intelligent systems, ML models and practical AI.</p>
+            <div className="domain-arrow-btn">
+              <ArrowRight size={18} color="#65a30d" />
+            </div>
+          </div>
+
+          {/* Card 3 */}
+          <div className="domain-card">
+            <div className="domain-card-header">
+              <div className="domain-icon-bg" style={{ backgroundColor: '#faf5ff' }}>
+                <Smartphone size={28} color="#a855f7" />
+              </div>
+              <div className="domain-number-container">
+                <span className="domain-number">03</span>
+                <div className="domain-number-underline"></div>
+              </div>
+            </div>
+            <h3 className="domain-card-title">App<br/>Development</h3>
+            <p className="domain-card-desc">Create mobile applications and real-world products.</p>
+            <div className="domain-arrow-btn">
+              <ArrowRight size={18} color="#65a30d" />
+            </div>
+          </div>
+
+          {/* Card 4 */}
+          <div className="domain-card">
+            <div className="domain-card-header">
+              <div className="domain-icon-bg" style={{ backgroundColor: '#fffbeb' }}>
+                <Trophy size={28} color="#f59e0b" />
+              </div>
+              <div className="domain-number-container">
+                <span className="domain-number">04</span>
+                <div className="domain-number-underline"></div>
+              </div>
+            </div>
+            <h3 className="domain-card-title">Competitive<br/>Programming</h3>
+            <p className="domain-card-desc">Master DSA, problem solving and coding contests.</p>
+            <div className="domain-arrow-btn">
+              <ArrowRight size={18} color="#65a30d" />
+            </div>
+          </div>
+
+          {/* Card 5 */}
+          <div className="domain-card">
+            <div className="domain-card-header">
+              <div className="domain-icon-bg" style={{ backgroundColor: '#f0fdfa' }}>
+                <Shield size={28} color="#14b8a6" />
+              </div>
+              <div className="domain-number-container">
+                <span className="domain-number">05</span>
+                <div className="domain-number-underline"></div>
+              </div>
+            </div>
+            <h3 className="domain-card-title">Cyber<br/>Security</h3>
+            <p className="domain-card-desc">Learn security, ethical hacking and secure systems.</p>
+            <div className="domain-arrow-btn">
+              <ArrowRight size={18} color="#65a30d" />
+            </div>
+          </div>
+
+          {/* Card 6 */}
+          <div className="domain-card">
+            <div className="domain-card-header">
+              <div className="domain-icon-bg" style={{ backgroundColor: '#f0f9ff' }}>
+                <Cloud size={28} color="#0ea5e9" />
+              </div>
+              <div className="domain-number-container">
+                <span className="domain-number">06</span>
+                <div className="domain-number-underline"></div>
+              </div>
+            </div>
+            <h3 className="domain-card-title">Cloud &<br/>DevOps</h3>
+            <p className="domain-card-desc">Deploy, scale and automate modern applications.</p>
+            <div className="domain-arrow-btn">
+              <ArrowRight size={18} color="#65a30d" />
+            </div>
+          </div>
+        </div>
+
+        {/* Pagination & Swipe */}
+        <div className="domains-pagination-container">
+          <div className="domains-dots">
+            <span className="domain-dot active"></span>
+            <span className="domain-dot"></span>
+            <span className="domain-dot"></span>
+            <span className="domain-dot"></span>
+            <span className="domain-dot"></span>
+            <span className="domain-dot"></span>
+          </div>
+          <div className="swipe-instruction">
+            <Mouse size={16} className="green-text" style={{ marginRight: '6px' }} /> 
+            <span><span className="green-text font-bold">Swipe</span> to explore domains</span>
+          </div>
+        </div>
       </section>
 
       {/* Upcoming Events Section (Mobile Only) */}
