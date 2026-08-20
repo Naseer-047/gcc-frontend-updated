@@ -447,16 +447,6 @@ function App() {
               </div>
               
               <div className="d-card-bottom">
-                <div className="d-section-title"><BookOpen size={18} color="#65a30d"/> What you'll learn</div>
-                <div className="d-learn-grid">
-                  {domain.learn.map((item, i) => (
-                    <div className="d-learn-item" key={i}>
-                      {item.icon}
-                      <span className="d-learn-text">{item.name}</span>
-                    </div>
-                  ))}
-                </div>
-                
                 <div className="d-action-buttons">
                   <div className="d-action-card">
                     <div className="d-action-icon"><Folder size={20}/></div>
