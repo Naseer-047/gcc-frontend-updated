@@ -457,16 +457,6 @@ function App() {
                   ))}
                 </div>
                 
-                <div className="d-section-title"><Settings size={18} color="#65a30d"/> Tools you'll use</div>
-                <div className="d-tools-row">
-                  {domain.tools.map((item, i) => (
-                    <div className="d-tool-item" key={i}>
-                      <div className="d-tool-icon">{item.icon}</div>
-                      <span className="d-tool-text">{item.name}</span>
-                    </div>
-                  ))}
-                </div>
-                
                 <div className="d-action-buttons">
                   <div className="d-action-card">
                     <div className="d-action-icon"><Folder size={20}/></div>
