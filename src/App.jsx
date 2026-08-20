@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { Menu, Users, Calendar, Mouse, ChevronDown, Trophy, Code2, ChevronRight, Rocket, Play, ArrowUpRight, Volume2, Maximize, ArrowRight, Mic, Code, Github, Box, Monitor, X, Star, MapPin, Clock, Brain, Smartphone, Shield, Cloud, BookOpen, Settings, Folder, Map, LayoutTemplate, Server, Layers, PenTool, Database, Terminal, Cpu, Globe, Lock, ShieldCheck } from 'lucide-react';
 import './index.css';
 
@@ -8,6 +8,28 @@ import desktopImg from '../assets/bg-less-desktop-laptop.png';
 function App() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('Home');
+  const [activeDomainIndex, setActiveDomainIndex] = useState(0);
+  const domainsGridRef = useRef(null);
+
+  const handleDomainsScroll = () => {
+    if (domainsGridRef.current) {
+      const scrollLeft = domainsGridRef.current.scrollLeft;
+      const cardWidth = domainsGridRef.current.clientWidth;
+      const newIndex = Math.round(scrollLeft / cardWidth);
+      setActiveDomainIndex(newIndex);
+    }
+  };
+
+  const scrollToDomain = (index) => {
+    if (domainsGridRef.current) {
+      const cardWidth = domainsGridRef.current.clientWidth;
+      domainsGridRef.current.scrollTo({
+        left: index * cardWidth,
+        behavior: 'smooth'
+      });
+      setActiveDomainIndex(index);
+    }
+  };
 
   const navItems = ['Home', 'Events', 'Projects', 'Team', 'About Us', 'Contact'];
 
@@ -428,7 +450,11 @@ function App() {
         </div>
 
         {/* Domains Grid */}
-        <div className="domains-grid">
+        <div 
+          className="domains-grid" 
+          ref={domainsGridRef}
+          onScroll={handleDomainsScroll}
+        >
           {mobileDomains.map((domain, index) => (
             <div className="domain-card-detailed" key={domain.id}>
               <div className="d-card-top">
@@ -473,12 +499,13 @@ function App() {
         {/* Pagination & Swipe */}
         <div className="domains-pagination-container">
           <div className="domains-dots">
-            <span className="domain-dot active"></span>
-            <span className="domain-dot"></span>
-            <span className="domain-dot"></span>
-            <span className="domain-dot"></span>
-            <span className="domain-dot"></span>
-            <span className="domain-dot"></span>
+            {mobileDomains.map((_, index) => (
+              <span 
+                key={index} 
+                className={`domain-dot ${activeDomainIndex === index ? 'active' : ''}`}
+                onClick={() => scrollToDomain(index)}
+              ></span>
+            ))}
           </div>
           <div className="swipe-instruction">
             <Mouse size={16} className="green-text" style={{ marginRight: '6px' }} /> 

@@ -974,6 +974,7 @@ body {
   margin-bottom: 32px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
   padding-bottom: 8px; /* For scrollbar */
   -ms-overflow-style: none;  /* IE and Edge */
   scrollbar-width: none;  /* Firefox */
@@ -985,7 +986,7 @@ body {
 
 .domain-card-detailed {
   scroll-snap-align: start;
-  background-color: #f7fee7; /* Light green for the top part */
+  background-color: #fff;
   border-radius: 24px;
   display: flex;
   flex-direction: column;
@@ -1086,11 +1087,7 @@ body {
 }
 
 .d-card-bottom {
-  background-color: #fff;
-  border-radius: 20px;
-  padding: 24px;
-  margin: 0 8px 8px; /* Slight inset from the main card */
-  box-shadow: 0 -4px 12px rgba(0,0,0,0.02);
+  padding: 0 24px 24px;
 }
 
 .d-section-title {
