@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Menu, Users, Calendar, Mouse, ChevronDown, Trophy, Code2, ChevronRight, Rocket, Play, ArrowUpRight, Volume2, Maximize, ArrowRight, Mic, Code, Github, Box, Monitor, X, Star, MapPin, Clock, Brain, Smartphone, Shield, Cloud } from 'lucide-react';
+import { Menu, Users, Calendar, Mouse, ChevronDown, Trophy, Code2, ChevronRight, Rocket, Play, ArrowUpRight, Volume2, Maximize, ArrowRight, Mic, Code, Github, Box, Monitor, X, Star, MapPin, Clock, Brain, Smartphone, Shield, Cloud, BookOpen, Settings, Folder, Map, LayoutTemplate, Server, Layers, PenTool, Database, Terminal, Cpu, Globe, Lock, ShieldCheck } from 'lucide-react';
 import './index.css';
 
 import mobileImg from '../assets/bg-less-desktop-mobile.png';
@@ -10,6 +10,165 @@ function App() {
   const [activeTab, setActiveTab] = useState('Home');
 
   const navItems = ['Home', 'Events', 'Projects', 'Team', 'About Us', 'Contact'];
+
+  const mobileDomains = [
+    {
+      id: '01',
+      title: 'WEB',
+      titleHighlight: 'DEVELOPMENT',
+      desc: 'Turn ideas into interfaces and real products.',
+      icon: <Code2 size={20} color="#65a30d" />,
+      techChips: [
+        { name: 'React', icon: <Code2 size={14} color="#0ea5e9"/> },
+        { name: 'Node.js', icon: <Server size={14} color="#65a30d"/> },
+        { name: 'MongoDB', icon: <Database size={14} color="#16a34a"/> }
+      ],
+      learn: [
+        { name: 'Frontend', icon: <LayoutTemplate size={24} className="d-learn-icon"/> },
+        { name: 'Backend', icon: <Server size={24} className="d-learn-icon"/> },
+        { name: 'Full Stack', icon: <Layers size={24} className="d-learn-icon"/> },
+        { name: 'UI Engineering', icon: <PenTool size={24} className="d-learn-icon"/> }
+      ],
+      tools: [
+        { name: 'React', icon: <Code2 size={16} color="#0ea5e9"/> },
+        { name: 'Node.js', icon: <Server size={16} color="#65a30d"/> },
+        { name: 'MongoDB', icon: <Database size={16} color="#16a34a"/> },
+        { name: 'Git', icon: <Terminal size={16} color="#ef4444"/> },
+        { name: 'Tailwind', icon: <PenTool size={16} color="#0ea5e9"/> },
+        { name: 'Vite', icon: <Cpu size={16} color="#8b5cf6"/> }
+      ]
+    },
+    {
+      id: '02',
+      title: 'AI & MACHINE',
+      titleHighlight: 'LEARNING',
+      desc: 'Explore intelligent systems, ML models and practical AI.',
+      icon: <Brain size={20} color="#3b82f6" />,
+      techChips: [
+        { name: 'Python', icon: <Terminal size={14} color="#eab308"/> },
+        { name: 'TensorFlow', icon: <Cpu size={14} color="#f97316"/> },
+        { name: 'PyTorch', icon: <Database size={14} color="#ef4444"/> }
+      ],
+      learn: [
+        { name: 'Data Science', icon: <Database size={24} className="d-learn-icon"/> },
+        { name: 'Neural Nets', icon: <Brain size={24} className="d-learn-icon"/> },
+        { name: 'NLP', icon: <Mic size={24} className="d-learn-icon"/> },
+        { name: 'Computer Vision', icon: <Monitor size={24} className="d-learn-icon"/> }
+      ],
+      tools: [
+        { name: 'Python', icon: <Terminal size={16} color="#eab308"/> },
+        { name: 'TensorFlow', icon: <Cpu size={16} color="#f97316"/> },
+        { name: 'PyTorch', icon: <Database size={16} color="#ef4444"/> },
+        { name: 'Pandas', icon: <LayoutTemplate size={16} color="#14b8a6"/> },
+        { name: 'NumPy', icon: <Layers size={16} color="#3b82f6"/> },
+        { name: 'Scikit-Learn', icon: <Settings size={16} color="#f59e0b"/> }
+      ]
+    },
+    {
+      id: '03',
+      title: 'APP',
+      titleHighlight: 'DEVELOPMENT',
+      desc: 'Create mobile applications and real-world products.',
+      icon: <Smartphone size={20} color="#a855f7" />,
+      techChips: [
+        { name: 'Flutter', icon: <Smartphone size={14} color="#0ea5e9"/> },
+        { name: 'React Native', icon: <Code2 size={14} color="#3b82f6"/> },
+        { name: 'Kotlin', icon: <Terminal size={14} color="#8b5cf6"/> }
+      ],
+      learn: [
+        { name: 'UI/UX', icon: <PenTool size={24} className="d-learn-icon"/> },
+        { name: 'Cross-platform', icon: <Layers size={24} className="d-learn-icon"/> },
+        { name: 'State Mgmt', icon: <Database size={24} className="d-learn-icon"/> },
+        { name: 'APIs', icon: <Globe size={24} className="d-learn-icon"/> }
+      ],
+      tools: [
+        { name: 'Flutter', icon: <Smartphone size={16} color="#0ea5e9"/> },
+        { name: 'React Native', icon: <Code2 size={16} color="#3b82f6"/> },
+        { name: 'Kotlin', icon: <Terminal size={16} color="#8b5cf6"/> },
+        { name: 'Swift', icon: <Cpu size={16} color="#f97316"/> },
+        { name: 'Firebase', icon: <Database size={16} color="#f59e0b"/> },
+        { name: 'Android Studio', icon: <Monitor size={16} color="#10b981"/> }
+      ]
+    },
+    {
+      id: '04',
+      title: 'COMPETITIVE',
+      titleHighlight: 'PROGRAMMING',
+      desc: 'Master DSA, problem solving and coding contests.',
+      icon: <Trophy size={20} color="#f59e0b" />,
+      techChips: [
+        { name: 'C++', icon: <Code size={14} color="#3b82f6"/> },
+        { name: 'Java', icon: <Code size={14} color="#ef4444"/> },
+        { name: 'Python', icon: <Terminal size={14} color="#eab308"/> }
+      ],
+      learn: [
+        { name: 'Algorithms', icon: <Settings size={24} className="d-learn-icon"/> },
+        { name: 'Data Structs', icon: <Database size={24} className="d-learn-icon"/> },
+        { name: 'Logic', icon: <Brain size={24} className="d-learn-icon"/> },
+        { name: 'Optimization', icon: <Cpu size={24} className="d-learn-icon"/> }
+      ],
+      tools: [
+        { name: 'C++', icon: <Code size={16} color="#3b82f6"/> },
+        { name: 'Java', icon: <Code size={16} color="#ef4444"/> },
+        { name: 'Python', icon: <Terminal size={16} color="#eab308"/> },
+        { name: 'LeetCode', icon: <Globe size={16} color="#f59e0b"/> },
+        { name: 'Codeforces', icon: <Trophy size={16} color="#ef4444"/> },
+        { name: 'VS Code', icon: <Monitor size={16} color="#0ea5e9"/> }
+      ]
+    },
+    {
+      id: '05',
+      title: 'CYBER',
+      titleHighlight: 'SECURITY',
+      desc: 'Learn security, ethical hacking and secure systems.',
+      icon: <ShieldCheck size={20} color="#14b8a6" />,
+      techChips: [
+        { name: 'Linux', icon: <Terminal size={14} color="#f59e0b"/> },
+        { name: 'Networking', icon: <Globe size={14} color="#3b82f6"/> },
+        { name: 'Cryptography', icon: <Lock size={14} color="#8b5cf6"/> }
+      ],
+      learn: [
+        { name: 'Ethical Hacking', icon: <ShieldCheck size={24} className="d-learn-icon"/> },
+        { name: 'Pen Testing', icon: <PenTool size={24} className="d-learn-icon"/> },
+        { name: 'Network Sec', icon: <Globe size={24} className="d-learn-icon"/> },
+        { name: 'Malware Analys', icon: <Cpu size={24} className="d-learn-icon"/> }
+      ],
+      tools: [
+        { name: 'Kali Linux', icon: <Terminal size={16} color="#3b82f6"/> },
+        { name: 'Wireshark', icon: <Globe size={16} color="#0ea5e9"/> },
+        { name: 'Metasploit', icon: <ShieldCheck size={16} color="#ef4444"/> },
+        { name: 'Burp Suite', icon: <Settings size={16} color="#f97316"/> },
+        { name: 'Nmap', icon: <Map size={16} color="#10b981"/> },
+        { name: 'Bash', icon: <Code size={16} color="#8b5cf6"/> }
+      ]
+    },
+    {
+      id: '06',
+      title: 'CLOUD &',
+      titleHighlight: 'DEVOPS',
+      desc: 'Deploy, scale and automate modern applications.',
+      icon: <Cloud size={20} color="#0ea5e9" />,
+      techChips: [
+        { name: 'AWS', icon: <Cloud size={14} color="#f59e0b"/> },
+        { name: 'Docker', icon: <Box size={14} color="#3b82f6"/> },
+        { name: 'Kubernetes', icon: <Layers size={14} color="#3b82f6"/> }
+      ],
+      learn: [
+        { name: 'CI/CD', icon: <Settings size={24} className="d-learn-icon"/> },
+        { name: 'Containers', icon: <Box size={24} className="d-learn-icon"/> },
+        { name: 'Cloud Infra', icon: <Cloud size={24} className="d-learn-icon"/> },
+        { name: 'Automation', icon: <Cpu size={24} className="d-learn-icon"/> }
+      ],
+      tools: [
+        { name: 'AWS', icon: <Cloud size={16} color="#f59e0b"/> },
+        { name: 'Docker', icon: <Box size={16} color="#3b82f6"/> },
+        { name: 'K8s', icon: <Layers size={16} color="#3b82f6"/> },
+        { name: 'Jenkins', icon: <Settings size={16} color="#ef4444"/> },
+        { name: 'Terraform', icon: <LayoutTemplate size={16} color="#8b5cf6"/> },
+        { name: 'Linux', icon: <Terminal size={16} color="#f59e0b"/> }
+      ]
+    }
+  ];
 
   return (
     <div className="app-container">
@@ -270,113 +429,65 @@ function App() {
 
         {/* Domains Grid */}
         <div className="domains-grid">
-          {/* Card 1 */}
-          <div className="domain-card">
-            <div className="domain-card-header">
-              <div className="domain-icon-bg" style={{ backgroundColor: '#f7fee7' }}>
-                <Code size={28} color="#65a30d" />
+          {mobileDomains.map((domain, index) => (
+            <div className="domain-card-detailed" key={domain.id}>
+              <div className="d-card-top">
+                <div className="d-card-header">
+                  <div className="d-index">{domain.id} <span className="d-index-total">/ 06</span></div>
+                  <div className="d-icon-floating">{domain.icon}</div>
+                </div>
+                <h3 className="d-title">{domain.title}<br/><span className="d-title-highlight">{domain.titleHighlight}</span></h3>
+                <p className="d-desc">{domain.desc}</p>
+                <div className="d-tech-chips">
+                  {domain.techChips.map((chip, i) => (
+                    <span className="d-tech-chip" key={i}>{chip.icon} {chip.name}</span>
+                  ))}
+                </div>
+                <button className="d-explore-btn">Explore Domain <ArrowRight size={16}/></button>
               </div>
-              <div className="domain-number-container">
-                <span className="domain-number">01</span>
-                <div className="domain-number-underline"></div>
-              </div>
-            </div>
-            <h3 className="domain-card-title">Web<br/>Development</h3>
-            <p className="domain-card-desc">Build modern websites and full-stack applications.</p>
-            <div className="domain-arrow-btn">
-              <ArrowRight size={18} color="#65a30d" />
-            </div>
-          </div>
-
-          {/* Card 2 */}
-          <div className="domain-card">
-            <div className="domain-card-header">
-              <div className="domain-icon-bg" style={{ backgroundColor: '#eff6ff' }}>
-                <Brain size={28} color="#3b82f6" />
-              </div>
-              <div className="domain-number-container">
-                <span className="domain-number">02</span>
-                <div className="domain-number-underline"></div>
-              </div>
-            </div>
-            <h3 className="domain-card-title">AI & Machine<br/>Learning</h3>
-            <p className="domain-card-desc">Explore intelligent systems, ML models and practical AI.</p>
-            <div className="domain-arrow-btn">
-              <ArrowRight size={18} color="#65a30d" />
-            </div>
-          </div>
-
-          {/* Card 3 */}
-          <div className="domain-card">
-            <div className="domain-card-header">
-              <div className="domain-icon-bg" style={{ backgroundColor: '#faf5ff' }}>
-                <Smartphone size={28} color="#a855f7" />
-              </div>
-              <div className="domain-number-container">
-                <span className="domain-number">03</span>
-                <div className="domain-number-underline"></div>
-              </div>
-            </div>
-            <h3 className="domain-card-title">App<br/>Development</h3>
-            <p className="domain-card-desc">Create mobile applications and real-world products.</p>
-            <div className="domain-arrow-btn">
-              <ArrowRight size={18} color="#65a30d" />
-            </div>
-          </div>
-
-          {/* Card 4 */}
-          <div className="domain-card">
-            <div className="domain-card-header">
-              <div className="domain-icon-bg" style={{ backgroundColor: '#fffbeb' }}>
-                <Trophy size={28} color="#f59e0b" />
-              </div>
-              <div className="domain-number-container">
-                <span className="domain-number">04</span>
-                <div className="domain-number-underline"></div>
+              
+              <div className="d-card-bottom">
+                <div className="d-section-title"><BookOpen size={18} color="#65a30d"/> What you'll learn</div>
+                <div className="d-learn-grid">
+                  {domain.learn.map((item, i) => (
+                    <div className="d-learn-item" key={i}>
+                      {item.icon}
+                      <span className="d-learn-text">{item.name}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="d-section-title"><Settings size={18} color="#65a30d"/> Tools you'll use</div>
+                <div className="d-tools-row">
+                  {domain.tools.map((item, i) => (
+                    <div className="d-tool-item" key={i}>
+                      <div className="d-tool-icon">{item.icon}</div>
+                      <span className="d-tool-text">{item.name}</span>
+                    </div>
+                  ))}
+                </div>
+                
+                <div className="d-action-buttons">
+                  <div className="d-action-card">
+                    <div className="d-action-icon"><Folder size={20}/></div>
+                    <div className="d-action-content">
+                      <div className="d-action-title">Projects</div>
+                      <div className="d-action-desc">Build real-world apps</div>
+                    </div>
+                    <ArrowRight size={16} color="#9ca3af"/>
+                  </div>
+                  <div className="d-action-card">
+                    <div className="d-action-icon"><Map size={20}/></div>
+                    <div className="d-action-content">
+                      <div className="d-action-title">Learning Path</div>
+                      <div className="d-action-desc">Your roadmap to mastery</div>
+                    </div>
+                    <ArrowRight size={16} color="#9ca3af"/>
+                  </div>
+                </div>
               </div>
             </div>
-            <h3 className="domain-card-title">Competitive<br/>Programming</h3>
-            <p className="domain-card-desc">Master DSA, problem solving and coding contests.</p>
-            <div className="domain-arrow-btn">
-              <ArrowRight size={18} color="#65a30d" />
-            </div>
-          </div>
-
-          {/* Card 5 */}
-          <div className="domain-card">
-            <div className="domain-card-header">
-              <div className="domain-icon-bg" style={{ backgroundColor: '#f0fdfa' }}>
-                <Shield size={28} color="#14b8a6" />
-              </div>
-              <div className="domain-number-container">
-                <span className="domain-number">05</span>
-                <div className="domain-number-underline"></div>
-              </div>
-            </div>
-            <h3 className="domain-card-title">Cyber<br/>Security</h3>
-            <p className="domain-card-desc">Learn security, ethical hacking and secure systems.</p>
-            <div className="domain-arrow-btn">
-              <ArrowRight size={18} color="#65a30d" />
-            </div>
-          </div>
-
-          {/* Card 6 */}
-          <div className="domain-card">
-            <div className="domain-card-header">
-              <div className="domain-icon-bg" style={{ backgroundColor: '#f0f9ff' }}>
-                <Cloud size={28} color="#0ea5e9" />
-              </div>
-              <div className="domain-number-container">
-                <span className="domain-number">06</span>
-                <div className="domain-number-underline"></div>
-              </div>
-            </div>
-            <h3 className="domain-card-title">Cloud &<br/>DevOps</h3>
-            <p className="domain-card-desc">Deploy, scale and automate modern applications.</p>
-            <div className="domain-arrow-btn">
-              <ArrowRight size={18} color="#65a30d" />
-            </div>
-          </div>
+          ))}
         </div>
 
         {/* Pagination & Swipe */}
