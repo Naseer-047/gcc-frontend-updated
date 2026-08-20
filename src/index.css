@@ -1013,7 +1013,7 @@ body {
 /* 2x2 Grid */
 .upcoming-events-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
   gap: 16px;
   margin-bottom: 32px;
 }

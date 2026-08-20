@@ -416,7 +416,7 @@ function App() {
           </div>
 
           <h2 className="events-title-desktop">
-            What We Do <span role="img" aria-label="rocket">🚀</span>
+            What We Do <span role="img" aria-label="rocket"></span>
           </h2>
 
           <p className="events-subtitle-desktop">
