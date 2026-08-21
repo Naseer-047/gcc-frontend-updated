@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react';
-import { Menu, Users, Calendar, Mouse, ChevronDown, Trophy, Code2, ChevronRight, Rocket, Play, ArrowUpRight, Volume2, Maximize, ArrowRight, Mic, Code, Github, Box, Monitor, X, Star, MapPin, Clock, Brain, Smartphone, Shield, Cloud, BookOpen, Settings, Folder, Map, LayoutTemplate, Server, Layers, PenTool, Database, Terminal, Cpu, Globe, Lock, ShieldCheck } from 'lucide-react';
+import { Menu, Users, Calendar, Mouse, ChevronDown, Trophy, Code2, ChevronRight, Rocket, Play, ArrowUpRight, Volume2, Maximize, ArrowRight, Mic, Code, Github, Box, Monitor, X, Star, MapPin, Clock, Brain, Smartphone, Shield, Cloud, BookOpen, Settings, Folder, Map, LayoutTemplate, Server, Layers, PenTool, Database, Terminal, Cpu, Globe, Lock, ShieldCheck, Zap, Flame, Copy, CheckCircle2, TrendingUp, Lightbulb } from 'lucide-react';
 import './index.css';
 
 import mobileImg from '../assets/bg-less-desktop-mobile.png';
@@ -676,6 +676,186 @@ function App() {
               <span className="font-bold">Don't miss out!</span>
             </div>
           </div>
+        </div>
+
+      </section>
+
+      {/* Coding Quiz Section (Mobile Only) */}
+      <section className="quiz-section mobile-only">
+        
+        {/* Quiz Header */}
+        <div className="quiz-header">
+          <div className="quiz-label">
+            <span className="quiz-slashes">//</span>
+            <span>CODING QUIZ</span>
+            <span className="quiz-slashes">//</span>
+          </div>
+
+          <h2 className="quiz-title">
+            How Good Are You<br />
+            At <span className="green-text">Coding?</span>
+          </h2>
+
+          <div className="quiz-subtitle-wrapper">
+            <svg className="quiz-arrow-svg" viewBox="0 0 60 40" fill="none">
+              <path d="M5,35 Q15,10 30,25 T55,5" stroke="#111" strokeWidth="1" strokeDasharray="3 3" fill="none" />
+              <path d="M55,5 L48,5 M55,5 L52,12" stroke="#111" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+            <p className="quiz-subtitle">
+              Challenge yourself. Test your knowledge.<br />
+              See where <span className="green-text">you stand.</span>
+            </p>
+            <div className="quiz-bulb-icon">
+              <Lightbulb size={32} color="#111" strokeWidth={1.5} />
+              <div className="bulb-rays">
+                <span className="ray r1"></span>
+                <span className="ray r2"></span>
+                <span className="ray r3"></span>
+                <span className="ray r4"></span>
+                <span className="ray r5"></span>
+              </div>
+              <CheckCircle2 size={12} fill="#84cc16" color="#fff" className="bulb-check" />
+            </div>
+          </div>
+        </div>
+
+        {/* Quiz Main Card */}
+        <div className="quiz-main-card">
+          <div className="quiz-card-top">
+            <div className="quiz-top-left">
+              <div className="quiz-zap-icon">
+                <Zap size={20} color="#eab308" fill="#eab308" />
+              </div>
+              <div className="quiz-top-text">
+                <h4>DAILY <span className="green-text">CODE</span> CHALLENGE</h4>
+                <p>Sharpen your skills everyday</p>
+              </div>
+            </div>
+            <div className="quiz-top-right">
+              <Flame size={24} color="#f97316" fill="#f97316" />
+              <div className="quiz-streak">
+                <span className="streak-num">7</span>
+                <span className="streak-text">DAY STREAK</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="quiz-card-body">
+            <div className="quiz-question-meta">
+              Question <span className="green-text font-bold">07</span> / 10
+            </div>
+            <h3 className="quiz-question">What will this JavaScript code output?</h3>
+            
+            <div className="quiz-code-block">
+              <pre>
+                <span className="keyword">const</span> x = [<span className="number">1</span>, <span className="number">2</span>, <span className="number">3</span>];<br />
+                <span className="built_in">console</span>.log(x.map(<span className="params">n</span> =&gt; n * <span className="number">2</span>));
+              </pre>
+              <Copy size={16} className="code-copy-icon" color="#9ca3af" />
+            </div>
+
+            <div className="quiz-options">
+              <div className="quiz-option">
+                <div className="option-letter">A</div>
+                <div className="option-text">[1, 2, 3]</div>
+              </div>
+              
+              <div className="quiz-option selected">
+                <div className="option-letter">B</div>
+                <div className="option-text">[2, 4, 6]</div>
+                <CheckCircle2 size={20} fill="#84cc16" color="#fff" className="option-check" />
+              </div>
+
+              <div className="quiz-option">
+                <div className="option-letter">C</div>
+                <div className="option-text">[1, 4, 9]</div>
+              </div>
+
+              <div className="quiz-option">
+                <div className="option-letter">D</div>
+                <div className="option-text">Error</div>
+              </div>
+            </div>
+
+            <button className="quiz-submit-btn">
+              Submit Answer <ArrowRight size={18} color="#111" />
+            </button>
+          </div>
+        </div>
+
+        {/* Stats Row */}
+        <div className="quiz-stats-row">
+          <div className="quiz-stat-card">
+            <div className="stat-icon-wrapper orange">
+              <Flame size={20} color="#f97316" fill="#f97316" />
+            </div>
+            <div className="stat-info">
+              <div className="stat-val">7</div>
+              <div className="stat-label">Day Streak <TrendingUp size={12} color="#84cc16"/></div>
+            </div>
+          </div>
+          
+          <div className="quiz-stat-card">
+            <div className="stat-icon-wrapper green">
+              <Trophy size={20} color="#84cc16" fill="#84cc16" />
+            </div>
+            <div className="stat-info">
+              <div className="stat-val">92%</div>
+              <div className="stat-label">Best Score <TrendingUp size={12} color="#84cc16"/></div>
+            </div>
+          </div>
+
+          <div className="quiz-stat-card">
+            <div className="stat-icon-wrapper purple">
+              <Code size={20} color="#8b5cf6" />
+            </div>
+            <div className="stat-info">
+              <div className="stat-val">1,240</div>
+              <div className="stat-label">Challenges Solved <TrendingUp size={12} color="#84cc16"/></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Leaderboard Card */}
+        <div className="quiz-leaderboard-card">
+          <div className="lb-left">
+            <h3>See how you rank<br /><span className="green-text">among other coders!</span></h3>
+            <button className="lb-btn">View Leaderboard <ArrowRight size={16} color="#111" /></button>
+          </div>
+          <div className="lb-avatars">
+            <div className="lb-avatar rank-2">
+              <img src="https://ui-avatars.com/api/?name=Aryan&background=random" alt="Aryan" />
+              <div className="rank-badge">2</div>
+              <div className="lb-name">Aryan<br/><span>980 pts</span></div>
+            </div>
+            <div className="lb-avatar rank-1">
+              <div className="crown-icon">
+                <svg viewBox="0 0 24 24" fill="#eab308">
+                  <path d="M5 16L3 5l5.5 5L12 4l3.5 6L21 5l-2 11H5zm14 3c0 .6-.4 1-1 1H6c-.6 0-1-.4-1-1v-1h14v1z"/>
+                </svg>
+              </div>
+              <img src="https://ui-avatars.com/api/?name=You&background=random" alt="You" style={{ border: '2px solid #84cc16' }} />
+              <div className="rank-badge">1</div>
+              <div className="lb-name green-text">You<br/><span>1,250 pts</span></div>
+            </div>
+            <div className="lb-avatar rank-3">
+              <img src="https://ui-avatars.com/api/?name=Diya&background=random" alt="Diya" />
+              <div className="rank-badge">3</div>
+              <div className="lb-name">Diya<br/><span>870 pts</span></div>
+            </div>
+          </div>
+        </div>
+
+        {/* Footer Card */}
+        <div className="quiz-footer-card">
+          <div className="qf-icon">
+            <Trophy size={40} color="#84cc16" fill="#84cc16" strokeWidth={1} />
+          </div>
+          <div className="qf-text">
+            <h4>Want more challenges?</h4>
+            <p>Explore quizzes across<br/>different domains.</p>
+          </div>
+          <button className="qf-btn">Explore More <ArrowRight size={16} color="#fff" /></button>
         </div>
 
       </section>
