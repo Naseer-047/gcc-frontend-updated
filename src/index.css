@@ -897,6 +897,7 @@ body {
   max-width: 1600px;
   margin: 0 auto;
   background-color: #fafafa;
+  flex-shrink: 0;
 }
 
 .domains-header {
@@ -1246,6 +1247,7 @@ body {
   max-width: 1600px;
   margin: 0 auto;
   background-color: var(--bg-light);
+  flex-shrink: 0;
 }
 
 .upcoming-events-header {
@@ -1487,6 +1489,323 @@ body {
   font-size: 14px;
   color: #4b5563;
   line-height: 1.4;
+}
+
+/* ========================================= */
+/* WHY JOIN US SECTION (MOBILE)              */
+/* ========================================= */
+.why-join-section {
+  padding: 60px 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.why-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.why-label {
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--primary-green);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.why-title {
+  font-size: 38px;
+  font-weight: 900;
+  color: #111;
+  line-height: 1.15;
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.why-title-highlight-container {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-underline-svg {
+  width: 60px;
+  height: 6px;
+  margin-top: 4px;
+}
+
+.why-subtitle {
+  font-size: 15px;
+  color: #4b5563;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.why-banner {
+  width: 100%;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.why-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  /* Using a CSS mask for the brush effect on top and bottom */
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,10 Q5,5 10,12 T20,8 T30,15 T40,5 T50,12 T60,6 T70,14 T80,5 T90,12 T100,8 V92 Q95,98 90,90 T80,95 T70,88 T60,96 T50,89 T40,95 T30,88 T20,95 T10,88 T0,94 Z' fill='black'/%3E%3C/svg%3E");
+  mask-image: url("data:image/svg+xml,%3Csvg preserveAspectRatio='none' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0,10 Q5,5 10,12 T20,8 T30,15 T40,5 T50,12 T60,6 T70,14 T80,5 T90,12 T100,8 V92 Q95,98 90,90 T80,95 T70,88 T60,96 T50,89 T40,95 T30,88 T20,95 T10,88 T0,94 Z' fill='black'/%3E%3C/svg%3E");
+  -webkit-mask-size: 100% 100%;
+  mask-size: 100% 100%;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.why-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.why-badge-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 12px 24px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  z-index: 2;
+  border-bottom: 3px solid #111;
+}
+
+.why-badge-logo {
+  font-size: 20px;
+  font-weight: 900;
+  line-height: 1.1;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.why-badge-text {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  color: #111;
+}
+
+.why-badge-side {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 10px;
+  font-weight: 800;
+  color: #111;
+  line-height: 1.6;
+  letter-spacing: 1px;
+  z-index: 2;
+  text-align: right;
+}
+.why-badge-side .green-text {
+  color: #65a30d;
+}
+
+.why-timeline-container {
+  width: 100%;
+  position: relative;
+  padding: 10px 0 40px;
+}
+
+.why-timeline-grid {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 0;
+  padding-bottom: 20px;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  position: relative;
+}
+
+.why-timeline-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.why-timeline-track {
+  position: absolute;
+  top: 35px;
+  left: 10%;
+  width: 250%; /* Make sure line covers all items */
+  border-top: 2px dotted #84cc16;
+  z-index: 0;
+}
+
+.why-step {
+  flex: 0 0 250px;
+  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.why-step-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #e5e7eb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+}
+
+.why-step-num {
+  background-color: #84cc16;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 800;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: -13px;
+  border: 3px solid #fff;
+}
+
+.why-step-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #111;
+  margin-top: 16px;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.why-step-desc {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+.why-cta-container {
+  width: 100%;
+  padding-top: 40px;
+  position: relative;
+}
+
+.why-cta-top {
+  position: relative;
+  margin-bottom: 40px;
+  padding: 0 20px;
+}
+
+.sketch-plane {
+  position: absolute;
+  top: -20px;
+  left: 0px;
+  width: 40px;
+  height: 40px;
+}
+
+.sketch-path {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 60px;
+  height: 40px;
+}
+
+.why-cta-text {
+  font-size: 28px;
+  font-weight: 800;
+  color: #111;
+  text-align: center;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  transform: rotate(-3deg);
+  line-height: 1.2;
+  margin-left: 20px;
+}
+
+.why-arrow-svg {
+  position: absolute;
+  right: 10px;
+  bottom: -40px;
+  width: 50px;
+  height: 40px;
+}
+
+.why-cta-bottom {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 20px;
+}
+
+.why-cta-btn-wrapper {
+  position: relative;
+  display: inline-block;
+  transform: rotate(-2deg);
+}
+
+.brush-bg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 160%;
+  z-index: 0;
+}
+
+.why-cta-btn {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  color: #111;
+  border: none;
+  font-size: 18px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  cursor: pointer;
+}
+
+.sketch-star {
+  position: absolute;
+  right: 40px;
+  bottom: -20px;
+  width: 40px;
+  height: 40px;
+}
+
+.why-cta-footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 /* ========================================= */

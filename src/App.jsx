@@ -831,6 +831,44 @@ function App() {
 
       </section>
 
+      {/* Why Join Us Section (Mobile Only) */}
+      <section className="why-join-section mobile-only">
+        {/* Call to Action */}
+        <div className="why-cta-container">
+          <div className="why-cta-top">
+            <svg className="sketch-plane" viewBox="0 0 40 40" fill="none" stroke="#111" strokeWidth="1.5">
+              <path d="M35,5 L5,18 L15,22 L35,5 Z" />
+              <path d="M15,22 L18,32 L22,25" />
+            </svg>
+            <svg className="sketch-path" viewBox="0 0 60 40" fill="none" stroke="#111" strokeWidth="1.5" strokeDasharray="4 4">
+              <path d="M10,35 Q30,45 50,20" />
+            </svg>
+            <h3 className="why-cta-text">
+              Be a part of something<br />
+              <span className="green-text">bigger</span> than yourself.
+            </h3>
+            
+            <svg className="why-arrow-svg" viewBox="0 0 50 40" fill="none">
+              <path d="M5,10 Q25,35 45,20" stroke="#111" strokeWidth="1.5" fill="none" />
+              <path d="M45,20 L38,15 M45,20 L40,27" stroke="#111" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            </svg>
+          </div>
+          
+          <div className="why-cta-bottom">
+            <div className="why-cta-btn-wrapper">
+              <svg className="brush-bg" viewBox="0 0 200 60" preserveAspectRatio="none" fill="#84cc16">
+                <path d="M10,15 Q40,5 100,10 T190,12 Q195,30 180,45 T100,50 Q15,48 5,30 Z" />
+              </svg>
+              <button className="why-cta-btn">Join the Club <ArrowRight size={18}/></button>
+            </div>
+            <svg className="sketch-star" viewBox="0 0 40 40" fill="none" stroke="#111" strokeWidth="1.5">
+              <path d="M20,5 L24,15 L35,16 L26,23 L29,34 L20,28 L11,34 L14,23 L5,16 L16,15 Z" />
+              <path d="M32,5 L34,10 L39,11 L35,15 L36,20 L31,17 L26,20 L27,15 L23,11 L28,10 Z" strokeWidth="1" transform="scale(0.5) translate(40, -10)"/>
+            </svg>
+          </div>
+        </div>
+      </section>
+
       {/* Mobile Menu Overlay */}
       <div className={`mobile-menu-overlay mobile-only ${isMobileMenuOpen ? 'open' : ''}`}>
         <div className="mobile-menu-content">
